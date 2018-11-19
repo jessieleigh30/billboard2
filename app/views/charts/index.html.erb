@@ -1,2 +1,8 @@
-<h1>Charts#index</h1>
-<p>Find me in app/views/charts/index.html.erb</p>
+<h1>Top Music Charts </h1>
+
+
+<% @charts.each do |chart| %>
+  <h5><%= link_to chart.name, chart_path(chart.id) %></h5>
+<% end %>
+
+<%= link_to "Add New Chart", new_chart_path %>
